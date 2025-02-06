@@ -1,0 +1,56 @@
+
+repair vm:
+
+#check and repair file system error:
+
+fsck -y /dev/vdb1
+
+#create folder to mount problemetic vm filesystem:
+
+mkdir /mnt/repair
+df -h
+mount /dev/vdb1 /mnt/repair/
+mount -t proc proc /mnt/repair/proc
+mount -t sysfs sys /mnt/repair/sys
+mount -o bind /dev /mnt/repair/dev
+mount /dev/vdb15 /mnt/repair/boot/
+chroot /mnt/repair/
+
+
+#if it is showing chroot unable to find /bin/bash 
+
+
+rsync -avz /bin/ /mnt/repair/bin
+rsync -avz /usr/ /mnt/repair/usr
+rsync -avz /sbin/ /mnt/repair/sbin
+
+chroot /mnt/repair/
+
+#need to install some packages :
+
+rm  /etc/resolv.conf
+vi  /etc/resolv.conf
+nameserver 8.8.8.8
+
+#pack install:
+
+
+add-apt-repository ppa:yannubuntu/boot-repair
+
+apt-get install --reinstall grub-efi-amd64 --fix-missing
+
+#after finishing exit from problemic vm shell:
+
+exit
+
+#unmount the repair partitions:
+
+umount -l /mnt/repair/
+
+
+
+
+
+
+
+

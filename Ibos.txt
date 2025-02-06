@@ -1,0 +1,31 @@
+
+
+Service Delivery || Ibos || 28/01/25
+###########################################################################
+
+Dear Sir,
+
+Greetings from Brilliant!
+As per request, we have provisioned the VM. Please find the information below:
+
+
+VM Package Details:
+Cores: 4 vCPU
+RAM: 8 GB1
+Storage: 50GB NVMe
+Operating System: Vicidial
+
+VM Credentials:
+VM Public IP: 103.209.43.110
+Username: root
+Password: Br!ll!@nt-\/M-P@5t-!B0S5!
+
+Kindly change the password after the first login.
+We have attached the security group "Ibos-SG" to the VM. ICMP and SSH ports have been allowed in the security group. You can configure additional ports as per your requirements from the BCP portal: https://bcp.brilliant.com.bd/
+
+BCP Portal Credentials:
+URL: https://bcp.brilliant.com.bd/
+Username: fozle@ibos.io
+Password: Br!ll!@nt-B66CP-!B0S5!
+
+For more details about Brilliant Cloud, please explore https://cloud-docs.brilliant.com.bd/

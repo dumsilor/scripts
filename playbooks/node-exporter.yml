@@ -1,0 +1,20 @@
+---
+- name: Deploy Node Exporter
+  hosts: all
+  become: yes
+  tasks:
+    - name: create a node-exporter folder
+      ansible.builtin.file:
+        path: /nodeExporter
+        state: directory
+
+    - name: navigate to node-exporter folder
+      template:
+        src: docker-compose.yml.j2
+        dest: /nodeExporter/docker-compose.yml
+        mode: '0644'
+    
+    - name: start the docker compose
+      command: docker compose up -f /nodeExporter/docker-compose.yml up -d
+      args:
+        chdir: /nodeExporter
