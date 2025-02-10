@@ -1,0 +1,31 @@
+
+
+Service Delivery || Easy-Trax || 28/11/24
+###########################################################################
+
+Dear Sir,
+
+Greetings from Brilliant!
+As per request, we have provisioned the VM. Please find the information below:
+
+
+VM Package Details:
+Cores: 4 vCPU
+RAM: 8 GB
+Storage: 30GB CEPH-SSD
+Operating System: Ubuntu 24.04
+
+VM Credentials:
+VM Public IP: 118.67.213.118
+Username: root
+Password: Br!ll!@nt-E@syTr@*
+
+Kindly change the password after the first login.
+We have attached the security group "Easy-Trax-SG" to the VM. ICMP and SSH ports have been allowed in the security group. You can configure additional ports as per your requirements from the BCP portal: https://bcp.brilliant.com.bd/
+
+BCP Portal Credentials:
+URL: https://bcp.brilliant.com.bd/
+Username: 
+Password: 
+
+For more details about Brilliant Cloud, please explore https://cloud-docs.brilliant.com.bd/
